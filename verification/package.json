@@ -1,0 +1,292 @@
+{
+  "created_utc": "2026-11-16T21:40:53.015503+00:00",
+  "scope": "Package inventory and verification, not publication or formal acceptance",
+  "verification": {
+    "status": "pass",
+    "source_sha256": "1f0219515ba8af76fcc077ac2c145aba5b06aea3b4a4494b96fcc3748fe5a419",
+    "pdf_sha256": "bc73472563fb517f3efcf4767863812ea3061e0a9005ddbb3ce80f447e80cff4",
+    "pages": 7,
+    "preserved_evidence_files_checked": 4,
+    "diagnostic_assertions": 46,
+    "formal_certification": false,
+    "scope": "package, hashes, receipts and links; not an additional mathematical experiment"
+  },
+  "review": "COMPLETE_WITH_DISPOSITIONS",
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 149,
+      "sha256": "a5fe9b11cbef50acf865bb1aa5dff6ab9b7fbadd7e198aa0503e354f86868aa8"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 56,
+      "sha256": "0233249fa98ae8fe8abcf4f415f970571dcf1aafe23005d4431c82239dadab2a"
+    },
+    {
+      "path": ".zenodo.json",
+      "bytes": 646,
+      "sha256": "e2427bd7cfc3984cbe0522b9c3f2d91358f8ef53e6f40687fc7efebcebbe1402"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 909,
+      "sha256": "8b2b339c70b269e76b527e77690652326050c18b98504c835f432d6f6e260d52"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 388,
+      "sha256": "dfa00d781e20544eb10e93888721c82532a5fe10d8a28bb0a3fde3771f4a6917"
+    },
+    {
+      "path": "CLAIMS.md",
+      "bytes": 3496,
+      "sha256": "565cb1229627847f4f7eea20ff304f8015e1717f7a2c5b94f179c8158b500e79"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1686,
+      "sha256": "1a7219098e35f3f2d84dfb7637c5ecb280cb3d3668eda1deb81569121e060293"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3570,
+      "sha256": "77ea6535186738344abf90e22f2addaaf3dce3c4df5f57ebd91c35211800554f"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 5063,
+      "sha256": "cc6a920e57fba00f7dabbbfc942afad58a6df490981660785ce6c54a9405c7ec"
+    },
+    {
+      "path": "evidence/e004-s282-coherent-exchange-hamiltonian-2026-11-15.md",
+      "bytes": 20705,
+      "sha256": "4eb2b4dca82db7b64f66e05ee0c5eb2cbb7cd4187d65c03116c8b379f246fe38"
+    },
+    {
+      "path": "evidence/e004-s285-unread-dephasing-2026-11-16.md",
+      "bytes": 17370,
+      "sha256": "b701d14a3a767409f0071a8a21e64d10b59215fc244acc51f00160bb896c8d2e"
+    },
+    {
+      "path": "evidence/e004-s287-protected-native-control-2026-11-16.md",
+      "bytes": 21754,
+      "sha256": "6624022e9d266ac807b1f6d9a12a7f14e775bc5921695cfeacc92e3b8b39b559"
+    },
+    {
+      "path": "evidence/e004-s288-dissipative-phase-cycle-2026-11-16.md",
+      "bytes": 22732,
+      "sha256": "b410499c201944f37a75efa49930ca354b42da6e1cb82129bc027aa56c43498b"
+    },
+    {
+      "path": "evidence/provenance.json",
+      "bytes": 1275,
+      "sha256": "7d2c1c1a81077a79a5d3ab5401476afd7c8f84f21760ebe76c1f4039554f4f12"
+    },
+    {
+      "path": "formal/CERTIFICATION-PLAN.md",
+      "bytes": 5354,
+      "sha256": "0520082dc2e2e2fa0c1ff0aefc1e7ebdfe2c8ab2ab7b19345f6da5a127501704"
+    },
+    {
+      "path": "manuscript/main.pdf",
+      "bytes": 84925,
+      "sha256": "bc73472563fb517f3efcf4767863812ea3061e0a9005ddbb3ce80f447e80cff4"
+    },
+    {
+      "path": "manuscript/main.tex",
+      "bytes": 23602,
+      "sha256": "1f0219515ba8af76fcc077ac2c145aba5b06aea3b4a4494b96fcc3748fe5a419"
+    },
+    {
+      "path": "reviews/INTERNAL-REVIEW.md",
+      "bytes": 2757,
+      "sha256": "ba9ae231adfc64699be0fc8a8d38b6bd91602f4e79f76ff25b91523c7e2d92e7"
+    },
+    {
+      "path": "reviews/REVIEW-SUMMARY.json",
+      "bytes": 3197,
+      "sha256": "b70a5a9355962761b71e0c237a5137b9092c51e6f2869cff67c6c13d4c5f928c"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/DISPOSITION.md",
+      "bytes": 5371,
+      "sha256": "163c0e04bc4e77b4b13fe4f31d043e38f258c8db1a07d2d5de9efc3024fba99d"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/agy-closeout.md",
+      "bytes": 12211,
+      "sha256": "7c950da5749b19017e9fdbe17385becf64898504f96b0eb448c512bf083a8963"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/agy-final.md",
+      "bytes": 12290,
+      "sha256": "dcd7103f7c7eb99a1b224682692c5cbf219475ac301b2396a02933269acd10df"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/agy-initial.md",
+      "bytes": 11537,
+      "sha256": "2918b90dc2c9bf2a5bf60b3e22a6b657f315756ded2e3428ada02bc3844e2f8e"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-closeout.md",
+      "bytes": 9186,
+      "sha256": "3e85fff548656790d5c411b539c8919fa1850e7e5169be1b3154eab464e425bf"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-final.md",
+      "bytes": 6648,
+      "sha256": "841a259737c3f440509ba6f21acfe85a9efe6738ab5683d4a29a3cb7b524523f"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/claude-initial.md",
+      "bytes": 9083,
+      "sha256": "46b35a6836e18f59a1008cee93876dfde9997aa4c9d1680c2966f1a18cab985b"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-agy-packet.txt",
+      "bytes": 40587,
+      "sha256": "d3d2d0a49e05ae90b523516fddec7bc56048bb6e93a7e589da49d880b521a018"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-claude-packet.txt",
+      "bytes": 40423,
+      "sha256": "f77b6787f88f3624aa37ca56a0f5f8e455c418a20a89ed6bdde0306c261a6008"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-grok-packet.txt",
+      "bytes": 40417,
+      "sha256": "d65d926516002ae7ceaf5c9f6fb5c51d647b79fff31cee916c7c57645a0e540a"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-inputs.json",
+      "bytes": 1268,
+      "sha256": "9d4d6936a8bf130c86d27424f754fc15adf4d6411841c7478ee8d680b049daa7"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/closeout-invocations.json",
+      "bytes": 2706,
+      "sha256": "9c1663352a941f27231f9f0198e7a242b406bea5e4f95f7dbed35ab4a230b8c6"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-agy-packet.txt",
+      "bytes": 39442,
+      "sha256": "8b073e8fb18cbf5a8e076177260739ee735f504b6254cfa71008a287bd0a12db"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-claude-packet.txt",
+      "bytes": 39278,
+      "sha256": "a28d95a88e2b8ec276a64f2233f2d17d2fdcd0147008044c6698c15239bdf1b4"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-grok-packet.txt",
+      "bytes": 39272,
+      "sha256": "ac2ae50f02a1c20acb47e7538437d11b4097e21554c0fefb5fd2e402d5ec67e6"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-inputs.json",
+      "bytes": 1259,
+      "sha256": "fd66f7440af3a457ca6280c1c005e333964bcf92ac03d7253daa17d5a2ca332d"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/final-invocations.json",
+      "bytes": 1806,
+      "sha256": "934fd51fdd5a392336b7634f3e8c066a749afaee3509f2f946ba81dd549f36a2"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/grok-closeout.md",
+      "bytes": 5888,
+      "sha256": "7e74cd3111fb665100074b5f2f7960135b4c5c23f79c16cefda84a478979fa62"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/grok-initial.md",
+      "bytes": 9092,
+      "sha256": "40a6a9cfd5d0a431d1542680f0899c284991919ba49f07a6cc0ab35e1e4be37b"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-agy-packet.txt",
+      "bytes": 36224,
+      "sha256": "540ad769bec38d47e11fd1766db9f5249aae0b2f474e02c285aad6b65de3291e"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-claude-packet.txt",
+      "bytes": 36060,
+      "sha256": "188e90dc1786a835f8524d2378388e44f7e80bdc192b22d31a0256b0e1cba657"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-grok-packet.txt",
+      "bytes": 36054,
+      "sha256": "e2f6dc0bf8e78847a080db2e1b38c2bf4dbde796a0eb85985603dd295e0459a4"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-inputs.json",
+      "bytes": 2749,
+      "sha256": "56bd3137878d2cf3bf10b851d65c78ad23593b33b0f994d0a3cdfac47afe93f4"
+    },
+    {
+      "path": "reviews/three-lens-2026-11-16/initial-invocations.json",
+      "bytes": 2706,
+      "sha256": "26a277b3fd23ccb86979ab668f02342f94c2a44543742b91528d4a2e33566ded"
+    },
+    {
+      "path": "tools/build.py",
+      "bytes": 2509,
+      "sha256": "ce2ca5a1126f0061c2a6b3f8451ec9674c1132dd7baaf6cb4dbd5f8acf496272"
+    },
+    {
+      "path": "tools/check_exact.py",
+      "bytes": 3356,
+      "sha256": "0034137e8fab9bf253f79f911a09bdcdf27eca0e46c2f92bc8c40c395dae2a3e"
+    },
+    {
+      "path": "tools/freeze_package.py",
+      "bytes": 1302,
+      "sha256": "d7dcd78b47b4c3ba63e1fcec31efb0110594f562180b833e1a1033fc0869f4f1"
+    },
+    {
+      "path": "tools/run_exact.py",
+      "bytes": 877,
+      "sha256": "6617400be4ff11836762d6a9c4fa6c0f52c246479bb0ac723e0415604753ce09"
+    },
+    {
+      "path": "tools/verify_package.py",
+      "bytes": 2690,
+      "sha256": "a1d77facbc160614b1ccf26863f16a0a8f2f9373c8754d6045e92cec9d8967cc"
+    },
+    {
+      "path": "tools/verify_reviews.py",
+      "bytes": 1279,
+      "sha256": "b4f062788b1d148c1f52ea492c6c9516bb64013e51df28759104c982d821ecaa"
+    },
+    {
+      "path": "verification/build.json",
+      "bytes": 623,
+      "sha256": "17991728b9cee813c55c08fc4c5803d6dc3334010c71e48a02de0d7526baea01"
+    },
+    {
+      "path": "verification/exact-check.json",
+      "bytes": 699,
+      "sha256": "f12109c460e85eb44e4f37989d336d059456543606cb391df0b213dc76a480af"
+    },
+    {
+      "path": "verification/exact-process.json",
+      "bytes": 864,
+      "sha256": "d7b1285b229c7f5d0c202bb0309e74542822fb069f99128d042e736407f28f50"
+    },
+    {
+      "path": "verification/source-downloads.json",
+      "bytes": 1068,
+      "sha256": "b9ee2d50357ad31f278eb6bc529df51508d0dc8b1cd0f7a920ced91126ec72ae"
+    }
+  ]
+}

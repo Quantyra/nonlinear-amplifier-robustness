@@ -1,0 +1,341 @@
+Independent AI manuscript review.
+Source SHA-256: 0891e8571c5904555500aed76a8c7814e0835061319bf4243afbe38135c04f58
+Lens: Non-claims/attribution. Audit title, abstract, full theorem scope, README, CLAIMS, SOURCES and metadata against the proofs. Distinguish imported approximate-QEC duality and linear-metrology principle from the new finite-damping/nonlinear application. Is the candidate a coherent scoped technical contribution, or only a restatement? Do not pretend to search literature or certify novelty. Check the strict common invariant-code premise, hypothetical primitive, non-attainment of dynamical sharpness, no physical implementation or unrestricted no-go, and review/formal/publication status.
+Read ONLY supplied material; no commands, edits, delegation, other files or external requests, except reading this exact packet if required by the CLI. Return the source SHA-256, severity-tagged findings with exact theorem/equation locations, attempted falsifiers, and GO / GO-WITH-NOTES / REVISE / INCOMPLETE. Do not invent source content or assert human peer review, kernel acceptance or exhaustive novelty. A positive verdict is not requested. Distinguish essential corrections from optional exposition.
+
+Named imported theorem, paraphrased from Beny--Oreshkov arXiv:0907.5391v4 Theorem1/equation3 (primary HTML inspected): for finite ordinary channels N,M with chosen complementary channels, max_R F(RN,M) = max_Rprime F(Nhat,Rprime Mhat), where F is minimum over inputs of ROOT entanglement fidelity. For M=id its complement discards the input, so Rprime Mhat is a constant state sigma. A supplied ordinary recovery with squared worst-case root fidelity >=1-eta therefore supplies a single constant complement with root fidelity >=sqrt(1-eta). This theorem does NOT apply to a nonlinear physical evolution; our N is the native-off finite amplitude-damping benchmark.
+Watrous Chapter3 Theorem3.22: root fidelity equals maximal purification overlap. Used only as standard fidelity machinery. Full source is not redistributed. Linear-QEC-metrology papers concern parameter-dependent linear generators and cannot be imported as nonlinear computational sufficiency. No literature clearance is supplied by this packet.
+Exact fixed diagnostic: 46 assertions, maximum dimension16, gamma0 control and positive gammas9/25,16/25,1, terminal exit0 under60seconds. Checks Kraus/source/code/syndrome substitutions, not channel duality or asymptotic/trajectory correctness.
+
+
+manuscript/main.tex:
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\title{Operational recovery bounds for an expectation-dependent quantum amplifier}
+\author{Daniel Fredriksen\\Quantyra Inc.\\\small\href{https://orcid.org/0009-0002-9123-7435}{ORCID: 0009-0002-9123-7435}}
+\date{November 16, 2026\\\small Manuscript candidate 0.1.0; not formally certified}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study a hypothetical quantum amplifier whose exchange coupling depends on a source population. For a finite code, we relate correctability of amplitude damping to the non-scalar parts of the compressed source and exchange operators. The bounds use worst-case entanglement recovery error and remain independent of code dimension. A rare-event refinement of the standard information--disturbance relation makes the relevant scale the recovery error divided by damping strength. For trajectories confined to a common invariant moving code, the full nonlinear generator then yields an explicit bound on distinguishability gain in terms of total coupling-time. A finite code and recovery show that the square-root recovery-to-compression exponent cannot generally be improved. This does not establish sharpness of the dynamical bound, exclude unprotected excursions or restricted-state recovery, or supply a physical nonlinear device. The contribution is a quantitative application of established approximate-error-correction tools to the stated nonlinear model.
+\end{abstract}
+
+\section{Question, baseline and scope}
+Ideal nonlinear state discrimination is an established subject~\cite{ChildsYoung}. The existence of an assumed amplifying equation leaves open whether its source can remain useful under error correction. In linear quantum metrology, the relation between the signal and the noise-operator span is already central~\cite{ZhouEtAl,ZhouJiang}. We do not claim that organizing principle as new or import a metrological sufficiency theorem into nonlinear computation.
+
+Our question is narrower. For the model below, how does an \emph{operational recovery guarantee} bound the nonlinear action remaining inside a protected code? An estimate in terms of a non-scalar operator-compression defect alone does not answer this question: that defect is not a physical error probability. We supply an explicit conversion for finite amplitude damping, then integrate the resulting generator bound. The channel theorem of B\'eny and Oreshkov~\cite{BenyOreshkov} is an essential imported result. Our rare-event estimate and finite Kraus identities determine the damping dependence of its application.
+
+All spaces are finite dimensional. The active qubits are a source $S$ and detector $B$, with basis $gg,ge,eg,ee$. Arbitrary additional physical registers are permitted and suppressed in tensor notation. Set
+\begin{equation}
+ P=\ket g\bra g_S\otimes I_B,\quad N=N_S+N_B,\quad
+ J=\ket{eg}\bra{ge}+\ket{ge}\bra{eg},\quad N_S=I-P.
+\end{equation}
+For a complete normalized pure state $\Psi$, including retained records and passive references, put $p=\langle P\rangle_\Psi$, $j=\langle J\rangle_\Psi$. The native law is
+\begin{equation}
+ H(\Psi,t)=\omega N+g(t)\sqrt p\,J+
+ \frac{g(t)j}{2\sqrt p}(P-pI),\qquad p>0.\label{eq:native}
+\end{equation}
+The nonlinear vector field is defined to be zero at $p=0$. The last term is required by the gradient of the homogeneous functional
+\begin{equation}
+ \mathcal E(\Psi)=\omega\langle\Psi,N\Psi\rangle+
+ g\sqrt{\frac{\langle\Psi,P\Psi\rangle}{\langle\Psi,\Psi\rangle}}
+ \langle\Psi,J\Psi\rangle.\label{eq:functional}
+\end{equation}
+We retain this term throughout. In particular, replacing the unknown population by a classically supplied number would be a different operation. No physical realization, causal completion or operational energy apparatus for~\eqref{eq:native} is supplied here.
+
+The trajectory theorem assumes that the compared clean trajectories remain in the range of a common differentiable isometry $V(t)$ during native evolution. Ordinary controls and changes of frame are independent of the unknown input. This is a stronger hypothesis than the requirements of an arbitrary successful nonlinear computer. Our recovery test assesses a code against a specified ordinary noise channel with native evolution switched off; it is not a model of an arbitrary simultaneous noisy nonlinear flow.
+
+\section{Recovery error and a rare-event estimate}
+Write $D(\rho,\sigma)=\tfrac12\norm{\rho-\sigma}_1$ and use root fidelity
+\begin{equation}
+ f(\rho,\sigma)=\norm{\sqrt\rho\sqrt\sigma}_1,\qquad
+ F(\mathcal A,\mathcal B)=\min_\rho
+ f\bigl((\mathcal A\otimes\id)(\psi_\rho),
+        (\mathcal B\otimes\id)(\psi_\rho)\bigr),
+\end{equation}
+where $\psi_\rho$ is a purification. For an encoded noise channel $\mathcal N_V$, suppose an ordinary recovery $\mathcal R$ satisfies
+\begin{equation}
+ F(\mathcal R\mathcal N_V,\id)^2\geq1-\eta,
+ \qquad 0\leq\eta\leq1.\label{eq:recovery}
+\end{equation}
+Thus $\eta$ is a worst-case entanglement-infidelity bound, not the square root of that error. A half-diamond recovery-error bound $\tfrac12\norm{\mathcal R\mathcal N_V-\id}_\diamond\leq\eta$ suffices for~\eqref{eq:recovery}: on each purified input the target is pure and its probability decreases by at most $\eta$.
+
+B\'eny--Oreshkov's channel fidelity duality, specialized to the identity target, implies that some environment state $\sigma$ satisfies
+\begin{equation}
+ F(\widehat{\mathcal N}_V,\mathcal S_\sigma)\geq\sqrt{1-\eta},
+ \qquad \mathcal S_\sigma(\rho)=\sigma\tr\rho.\label{eq:duality}
+\end{equation}
+Here the hat denotes a complementary channel. This is an existence statement. It does not provide a low-cost algorithm for finding $V$, $\mathcal R$ or $\sigma$. In particular, no semidefinite-program cost is hidden in a computational claim.
+
+\begin{lemma}[Rare-event observable bound]\label{lem:rare}
+Let $\Pi$ be a projector and $O$ Hermitian with $O=\Pi O\Pi$ and $\norm O\leq1$. Suppose $f(\rho,\sigma)\geq\sqrt{1-\eta}$ and $\tr(\Pi\rho)\leq w$. Set
+\begin{equation}
+ b(\eta)=\sqrt{2(1-\sqrt{1-\eta})}\leq\sqrt{2\eta}.
+\end{equation}
+Then
+\begin{equation}
+ |\tr O(\rho-\sigma)|\leq2b(\eta)\sqrt w+b(\eta)^2.\label{eq:rare}
+\end{equation}
+\end{lemma}
+\begin{proof}
+By the purification characterization of fidelity, choose unit purifications $x,y$ of $\rho,\sigma$ with $\norm{x-y}\leq b=b(\eta)$. Extend $O,\Pi$ by the identity on the purifying space. Then $\norm{\Pi x}\leq\sqrt w$ and $\norm{\Pi y}\leq\sqrt w+b$. Expanding the difference of expectations and applying Cauchy--Schwarz gives
+\[
+ |\langle x,Ox\rangle-\langle y,Oy\rangle|
+ \leq\norm{x-y}\bigl(\norm{\Pi x}+\norm{\Pi y}\bigr)
+ \leq b(2\sqrt w+b).
+\]
+Finally $1-\sqrt{1-\eta}\leq\eta$. The argument also covers $w=0$ and $\eta=0$.
+\end{proof}
+The purification and fidelity facts used here are standard~\cite{Watrous}. The refinement over a plain trace-distance estimate is the factor $\sqrt w$ when the relevant environmental event is rare.
+
+\section{From finite damping recovery to source compression}
+For $0<\gamma\leq1$, let one-qubit amplitude damping have Kraus operators
+\begin{equation}
+ A_0=\ket g\bra g+\sqrt{1-\gamma}\ket e\bra e,
+ \qquad A_1=\sqrt\gamma\ket g\bra e.
+\end{equation}
+On $SB$, put $K_{ij}=A_i\otimes A_j$, $i,j\in\{0,1\}$. The channel acts as the identity on all other physical registers. Compose it with the encoding $\rho\mapsto V\rho V^\dagger$ to obtain $\mathcal N_V$. Label the complementary environment basis by $00,10,01,11$, and define
+\begin{equation}
+ \Pi_S=\ket{10}\bra{10}+\ket{11}\bra{11},\qquad
+ T=\ket{10}\bra{01}+\ket{01}\bra{10}.
+\end{equation}
+Direct Kraus multiplication gives
+\begin{align}
+ \widehat{\mathcal N}_V^*(\Pi_S)&=\gamma V^\dagger N_S V,\label{eq:pullP}\\
+ \widehat{\mathcal N}_V^*(T)&=\gamma V^\dagger J V.\label{eq:pullJ}
+\end{align}
+For example, $K_{10}^\dagger K_{01}=\gamma\ket{eg}\bra{ge}$, including at $\gamma=1$. The single-jump projector $\Pi_1=\ket{10}\bra{10}+\ket{01}\bra{01}$ obeys
+\begin{equation}
+ \widehat{\mathcal N}_V^*(\Pi_1)
+ =\gamma V^\dagger(N_S+N_B-2\gamma N_SN_B)V.
+\end{equation}
+Consequently its probability is at most $2\gamma$, while the source-jump probability is at most $\gamma$. These bounds are deliberately conservative when $\gamma$ is large.
+
+\begin{theorem}[Operational compression bound]\label{thm:compression}
+Under~\eqref{eq:recovery}, there are real scalars $a,c$ such that
+\begin{align}
+ \norm{V^\dagger PV-aI}&\leq e_P(\gamma,\eta),\\
+ \norm{V^\dagger JV-cI}&\leq e_J(\gamma,\eta),\label{eq:compression}
+\end{align}
+where, with $b=b(\eta)$,
+\begin{align}
+ e_P(\gamma,\eta)&=\min\left\{\tfrac12,
+                 \frac{2b}{\sqrt\gamma}+\frac{b^2}{\gamma}\right\},\\
+ e_J(\gamma,\eta)&=\min\left\{1,
+                 \frac{2\sqrt2b}{\sqrt\gamma}+\frac{b^2}{\gamma}\right\}.\label{eq:eps}
+\end{align}
+The result is independent of logical and spectator dimensions.
+\end{theorem}
+\begin{proof}
+Use the state $\sigma$ from~\eqref{eq:duality}. For every logical pure input, apply Lemma~\ref{lem:rare} to its environment output: first $O=\Pi_S$ with $w=\gamma$, then $O=T$ supported on $\Pi_1$ with $w=2\gamma$. Divide the resulting bounds by $\gamma$ and use~\eqref{eq:pullP}--\eqref{eq:pullJ}. Since the expectations of a Hermitian matrix over all unit vectors determine its operator norm, this proves scalar-approximation bounds with the second arguments of the minima in~\eqref{eq:eps}. The optimal real scalar is the midpoint of the smallest and largest eigenvalues. Its error is half the spectral diameter and is no larger than either obtained bound. Since $0\leq V^\dagger PV\leq I$ and $\norm{V^\dagger JV}\leq1$, the trivial midpoint bounds are $1/2$ and $1$, respectively. Choosing the midpoint scalars proves both minima simultaneously, without computing $\sigma$.
+\end{proof}
+In particular $\eta=0$ makes both compressed operators scalar. The theorem uses an ordinary finite noise channel, including no-jump and double-jump terms; it does not replace finite damping by an informal single-loss test.
+
+\section{A whole-trajectory distinguishability bound}
+Let two complete clean trajectories have initial trace distance $d_0$. During native-on intervals they lie in the range of a common differentiable isometry $V(t)$, possibly tensored with passive references. Suppose the code at every such time satisfies~\eqref{eq:recovery} for the finite damping test with parameters $\gamma(t)>0$, $\eta(t)$. Ordinary controls and the moving frame are common to both inputs. The theorem also permits common ordinary channel boundaries with specified retained dilations and an admitted common code for each subsequent native interval. No separately evolved unread nonlinear branches are assumed.
+
+\begin{theorem}[Gain limited by operational recovery]\label{thm:gain}
+Under these hypotheses, a single native pair satisfies
+\begin{equation}
+ D_{\rm out}\leq\min\left\{1,\ d_0+
+ 2\int |g(t)|[e_P(\gamma(t),\eta(t))+e_J(\gamma(t),\eta(t))]dt\right\}.\label{eq:gain}
+\end{equation}
+For simultaneous pairs, sum their corresponding integrands. If $\eta(t)/\gamma(t)\leq r\leq1$ and $A=\int|g(t)|dt$ (summed over pairs when needed), then
+\begin{equation}
+ D_{\rm out}\leq\min\{1,d_0+22A\sqrt r\}.\label{eq:simple}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Write $V^\dagger PV=aI+E_P$, $V^\dagger JV=cI+E_J$ using midpoint scalars. The ordinary part of the logical generator consists of the compressed ordinary controls, $\omega V^\dagger NV$, and the common moving-frame connection $-iV^\dagger\dot V$. Removing scalar terms from the nonlinear part of~\eqref{eq:native} leaves
+\begin{equation}
+ R_\Psi=g\sqrt p\,E_J+\frac{gj}{2\sqrt p}E_P.\label{eq:residual}
+\end{equation}
+Because $PJP=(I-P)J(I-P)=0$ and $\norm J\leq1$,
+\begin{equation}
+ |j|\leq2\sqrt{p(1-p)},\qquad
+ \norm{R_\Psi}\leq|g|(e_J+e_P).\label{eq:bounded}
+\end{equation}
+This estimate does not divide by a lower bound on $p$. At $p=0$ the native vector field is zero by its stated extension, so its density-operator contribution also has a zero representative satisfying the same bound. To see the continuity of that vector contribution, $\norm{P\Psi}=\sqrt p$ and~\eqref{eq:bounded}'s first inequality bound each apparently singular term in $H(\Psi)\Psi$ by a constant times $|g|\sqrt p$.
+
+For either input, compare the logical state with evolution under the common ordinary generator alone. Variation of constants and
+\begin{equation}
+ \tfrac12\norm{[R,\rho]}_1\leq\norm R
+\end{equation}
+give a trace-distance change of at most $\int|g|(e_P+e_J)dt$. This calculation evaluates $R$ on the actual trajectory; it does not assume the nonlinear flow is contractive. The triangle inequality for the two actual inputs supplies the factor two in~\eqref{eq:gain}. Common ordinary channel boundaries contract distance. The same argument applies successively over all intervals; parallel generators are charged by the sum of their norms.
+
+Finally $b/\sqrt\gamma\leq\sqrt{2\eta/\gamma}$ and $b^2/\gamma\leq2\eta/\gamma$. Dropping the caps, the integrand factor obeys
+\[
+ e_P+e_J\leq(2\sqrt2+4)\sqrt r+4r
+ \leq(8+2\sqrt2)\sqrt r<11\sqrt r.
+\]
+This proves~\eqref{eq:simple}.
+\end{proof}
+
+Equal-prior discrimination with success at least $2/3$ requires $D_{\rm out}\geq1/3$. Hence for $d_0\leq1/4$ the uniform bound implies
+\begin{equation}
+ A\sqrt r\geq\frac1{264}.\label{eq:cost}
+\end{equation}
+If $r$ is exponentially small and the summed native strength is polynomially bounded, this particular protected-trajectory class needs exponentially large coupling-time. Conversely, inverse-polynomial $r$ over polynomial coupling-time is not excluded. The bound does not prove that such an algorithm exists.
+
+The damping normalization is essential. If a noise slice has $\gamma\simeq\kappa\Delta t$, the relevant ratio is $\eta/(\kappa\Delta t)$, not $\eta$ alone. Absolute recovery errors going to zero as $\Delta t\to0$ therefore do not automatically suppress the amplifier. This paper does not derive $\eta(\Delta t)$ for a physical control implementation, pay an assumed infinitely fast correction cycle, or replace the common-invariant-code hypothesis by a theorem about arbitrary excursions. Encoding, recovery, native synthesis, control accuracy and classical construction costs remain additional requirements. Only the explicitly defined summed native coupling-time is lower bounded here.
+
+\section{The square-root compression exponent is necessary}
+The following construction concerns the recovery-to-compression step, not attainment of the dynamical gain bound. Fix $0<a<1$ and $0<d<\min(a,1-a)$; put $n_0=a+d$, $n_1=a-d$. With a four-dimensional noiseless ancillary register labelled by $(j,f)\in\{0,1\}^2$ and detector $B$ fixed in $g$, encode
+\begin{equation}
+ V\ket j=\sqrt{1-n_j}\ket{gg}\ket{j,0}
+             +\sqrt{n_j}\ket{eg}\ket{j,1}.\label{eq:code}
+\end{equation}
+The code is an isometry and
+\begin{equation}
+ \inf_{c\in\mathbb R}\norm{V^\dagger PV-cI}=d.\label{eq:defect}
+\end{equation}
+Apply the same two-qubit damping channel; the detector has no excitation to lose. For each $j$, the no-jump and source-jump vectors have norms $\sqrt{1-\gamma n_j}$ and $\sqrt{\gamma n_j}$. Their four normalized directions are orthogonal: the jump has source $g$ and ancillary flag $1$, while the no-jump vector has support only on $(g,0)$ and $(e,1)$. An ordinary isometric decoder maps them to $\ket j\ket{\mathrm{no}}$ and $\ket j\ket{\mathrm{jump}}$, respectively. Complete that isometry with extra syndrome dimensions if needed, then trace the syndrome.
+
+The resulting logical channel preserves diagonal entries and multiplies off-diagonal entries by
+\begin{equation}
+ \lambda=\sqrt{(1-\gamma a)^2-\gamma^2d^2}
+                 +\gamma\sqrt{a^2-d^2}.\label{eq:lambda}
+\end{equation}
+It is the phase-flip channel with error probability $\eta_{\rm rec}=(1-\lambda)/2$. For a purified logical input with reduced state $\rho$, its squared entanglement fidelity is
+\begin{equation}
+ 1-\eta_{\rm rec}+\eta_{\rm rec}(\tr\rho Z)^2.
+\end{equation}
+Thus its worst-case infidelity is exactly $\eta_{\rm rec}$, attained when $\tr\rho Z=0$. Expanding the two positive square roots at $d=0$, for fixed $a,\gamma$ gives
+\begin{equation}
+ \eta_{\rm rec}=\frac{\gamma d^2}{4a(1-\gamma a)}+O(d^4).\label{eq:scaling}
+\end{equation}
+In particular, a universal replacement of the recovery-to-source-defect scale $\sqrt{\eta/\gamma}$ by $o(\sqrt{\eta/\gamma})$ would fail on this family: the achieved error in~\eqref{eq:scaling} is a legitimate recovery guarantee while the defect is exactly $d$. This conclusion remains true if one substitutes the optimal recovery error, which is no larger than the achieved one.
+
+This finite decoder depends only on known code and damping parameters, not an unknown logical state. We make no optimal synthesis-cost claim. Crucially, $J$ sends the excited-source component of~\eqref{eq:code} to a detector-excited vector outside the code. The construction therefore does \emph{not} satisfy the native-invariance premise of Theorem~\ref{thm:gain} and does not demonstrate a working protected nonlinear amplifier. Neither the constant 22 nor the overall dynamical exponent is proved optimal.
+
+\section{Contribution, limitations and verification}
+The operational bridge replaces unspecified compression defects by a standard worst-case recovery error, with explicit damping dependence and no code-dimension loss. The channel-fidelity duality is imported, and the signal/noise compatibility principle is established prior work. The new manuscript contribution is the stated combination of the finite damping observables, rare-event estimate, complete nonlinear-generator bound and finite scaling witness. Exhaustive novelty and priority are not certified.
+
+The theorem does not address nonlinear recovery, state families smaller than an unknown logical code, input-dependent classical computation of the answer, arbitrary finite excursions from a protected code, a native interaction outside the tested noise-observable structure, or physical realization. It does not convert a conserved scalar functional into an operational total-energy theorem. Ordinary BPP versus BQP is unchanged.
+
+The proofs are analytic. A fixed exact diagnostic checks finite Kraus identities and the encoding at rational parameter choices; no numerical agreement establishes the asymptotic theorem. The repository preserves the antecedent research notes with their original limitations. Separate proof-adversarial, complexity/resource and non-claims/attribution reports and their source hashes are tracked in the repository; those receipts determine the review status. Such AI reviews do not constitute Lean certification or human peer review.
+
+\paragraph{Assistance and status.} OpenAI Codex assisted with derivation, source comparison, drafting and internal checks; separate Claude, Grok and AGY reviews are recorded as described above. This is a preparation-stage candidate, not a physical proposal or an archival publication. Author funding and competing-interest declarations remain to be finalized for any selected submission destination.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{BenyOreshkov} C. B\'eny and O. Oreshkov, ``General Conditions for Approximate Quantum Error Correction and Near-Optimal Recovery Channels,'' \emph{Phys. Rev. Lett.} \textbf{104}, 120501 (2010). \href{https://doi.org/10.1103/PhysRevLett.104.120501}{doi:10.1103/PhysRevLett.104.120501}. \href{https://arxiv.org/abs/0907.5391v4}{arXiv:0907.5391v4}.
+\bibitem{ZhouEtAl} S. Zhou, M. Zhang, J. Preskill and L. Jiang, ``Achieving the Heisenberg limit in quantum metrology using quantum error correction,'' \emph{Nature Communications} \textbf{9}, 78 (2018). \href{https://doi.org/10.1038/s41467-017-02510-3}{doi:10.1038/s41467-017-02510-3}. \href{https://arxiv.org/abs/1706.02445v2}{arXiv:1706.02445v2}.
+\bibitem{ZhouJiang} S. Zhou and L. Jiang, ``Optimal Approximate Quantum Error Correction for Quantum Metrology,'' \emph{Phys. Rev. Research} \textbf{2}, 013235 (2020). \href{https://doi.org/10.1103/PhysRevResearch.2.013235}{doi:10.1103/PhysRevResearch.2.013235}. \href{https://arxiv.org/abs/1910.08472v1}{arXiv:1910.08472v1}.
+\bibitem{ChildsYoung} A. M. Childs and J. Young, ``Optimal state discrimination and unstructured search in nonlinear quantum mechanics,'' \emph{Phys. Rev. A} \textbf{93}, 022314 (2016). \href{https://doi.org/10.1103/PhysRevA.93.022314}{doi:10.1103/PhysRevA.93.022314}. \href{https://arxiv.org/abs/1507.06334v2}{arXiv:1507.06334v2}.
+\bibitem{Watrous} J. Watrous, \emph{The Theory of Quantum Information}, Cambridge University Press (2018). Author's text: \href{https://cs.uwaterloo.ca/~watrous/TQI/}{cs.uwaterloo.ca/\textasciitilde watrous/TQI/}.
+\end{thebibliography}
+\end{document}
+
+
+README.md:
+# Operational recovery bounds for a nonlinear amplifier
+
+Research manuscript candidate 0.1.0, 2026-11-16. Daniel Fredriksen, Quantyra Inc., ORCID 0009-0002-9123-7435. **Not published or formally certified. Separate three-lens review must finish before PaperMill handoff.** Scientific/preparation owner: Quantum S291.
+
+The earlier protected-source bound used operator-compression defects without relating them to an operational recovery guarantee. This candidate closes that connection for finite amplitude damping. Standard channel-fidelity duality plus a rare-event estimate gives dimension-independent source/exchange bounds in terms of the recovery infidelity divided by damping strength. For the stated common-invariant-moving-code class,
+
+\[
+D_{\mathrm{out}}\leq\min\{1,D_{\mathrm{in}}+22A\sqrt r\},
+\qquad r\geq\sup_t\eta(t)/\gamma(t),\quad r\leq1,
+\]
+
+where A is summed native coupling-time. The complete coefficient-derivative term of the hypothetical nonlinear primitive is retained. A finite code and recovery show the square-root exponent is necessary for the **recovery-to-source-compression step**. They do not attain the dynamical bound or implement a protected amplifier.
+
+- [Manuscript PDF](manuscript/main.pdf) / [LaTeX](manuscript/main.tex).
+- [Claims and limitations](CLAIMS.md), [primary-source transfers and novelty assessment](SOURCES.md).
+- [Historical evidence and provenance](evidence/provenance.json).
+- [Exact diagnostic](verification/exact-check.json) and [child-process receipt](verification/exact-process.json): one run, 46 assertions, exit 0, maximum dimension 16, four rational damping choices including a zero-damping control.
+- [Build receipt](verification/build.json). Rendering requires Python 3.13.7, PyMuPDF 1.28.2 and Tectonic 0.17.0; the diagnostic uses only the Python standard library.
+
+```text
+python -B tools/run_exact.py
+python -B tools/build.py --tectonic /path/to/tectonic --render
+```
+
+Preserve the frozen receipts before reproducing; those commands replace current local receipts. Full primary-source snapshots are ignored and not redistributed. The manuscript's analytic statements do not follow from a finite diagnostic. No optimal recovery algorithm, code-discovery cost, physical noise budget, native synthesis or arbitrarily fast correction is provided. The common invariant code and finite damping benchmark are essential hypotheses; no general fault-tolerance impossibility or ordinary BPP/BQP result is claimed.
+
+Publication significance/priority remain under review. Channel fidelity duality and the signal/noise-span principle are attributed prior results, not discoveries claimed here. No second paper is registered with PaperMill yet. Remaining work: complete independent provider-native proof-adversarial, complexity/resource and non-claims/attribution reviews, resolve findings, then decide a scoped handoff. No public release, DOI or Lean job is authorized by preparation.
+
+
+CLAIMS.md:
+# Candidate claim and obligation map
+
+All entries refer to the frozen `manuscript/main.tex` and build receipt. Written arguments exist; independent review is pending and no formal coverage is claimed.
+
+| ID | Statement / quantitative output | Required structure and limits | Location |
+|---|---|---|---|
+| D1 | Full nonlinear generator, normalized homogeneous functional and zero-population extension | P source projector; exchange J off-diagonal relative to P; complete pure state including records; hypothetical native operation | Section 1 |
+| I1 | Worst-case channel root-fidelity duality supplies a single constant complementary output with root fidelity >=sqrt(1-eta) | **Imported** Beny--Oreshkov Theorem 1; finite encoded noise channel, identity target, arbitrary ordinary recovery; eta is squared-fidelity infidelity | Section 2 |
+| C1 | An observable supported on an event of probability <=w changes expectation by <=2b sqrt(w)+b^2, b=sqrt(2(1-sqrt(1-eta))) | Uhlmann purifications, Hermitian contraction supported on a projector; standard estimates, no novelty claim for the general method | Lemma 1 |
+| C2 | Exact complementary pullbacks: source-jump projector ->gamma V†NsV; exchange between jump flags ->gamma V†JV; single-jump probability <=2gamma | Full two-qubit amplitude damping, gamma in (0,1], including no/double jumps; noiseless spectators | Section 3 |
+| C3 | Source and exchange compress within eP and eJ of real scalars, independently of code dimension | Operational worst-case entanglement recovery error; bounds include b/sqrt(gamma), b²/gamma and trivial spectral caps | Theorem 2 |
+| C4 | Whole-trajectory D_out<=d0+2 integral sum |g|(eP+eJ); uniform ratio r<=1 gives <=d0+22A sqrt(r) | Common invariant differentiable moving code, common ordinary controls/dilations, all records accounted; finite damping is a code benchmark, not automatically simultaneous noisy dynamics | Theorem 3 |
+| C5 | Constant equal-prior discrimination with d0<=1/4 implies A sqrt(r)>=1/264 | Final ordinary readout; native summed coupling-time, not every algorithm's runtime | Section 4 |
+| C6 | Finite code/decoder gives source defect d and exact logical dephasing multiplier lambda; worst-case infidelity (1-lambda)/2 | Known a,d,gamma; detector initially ground, ordinary finite recovery; explicit four orthogonal syndrome directions | Section 5 |
+| C7 | eta_rec=gamma d²/[4a(1-gamma a)]+O(d⁴); square-root recovery-to-source-defect exponent cannot be improved generally | d->0 with a,gamma fixed, 0<a<1, 0<gamma<=1; does **not** show optimal dynamical exponent/constant or an invariant amplifier | Section 5 |
+
+Auxiliary claims included in any future full certification: trace/diamond normalization, midpoint scalar radius, fidelity/purification identities, full Kraus completeness, p=0 vector extension, commutator trace-norm bound, common-frame connection and channel-boundary composition, simultaneous-pair summation, decoder extension, exact dephasing worst-case fidelity and Taylor remainder hypotheses.
+
+Excluded claims: a universal nonlinear-computing impossibility, physical native realization, a constructive general recovery algorithm, tight gain bound, finite-excursion theorem, logical-error accumulation for an implemented noisy circuit, or BPP/BQP progress. Historical S282-S288 notes provide provenance; their other results are not silently included as newly reviewed manuscript theorems.
+
+
+SOURCES.md:
+# Named primary-source transfers and novelty boundary
+
+Audit: 2026-11-16. Question: can S287's source/exchange compression defects be derived from an operational recovery error without a hidden code-dimension loss, and does this add a distinct application beyond existing approximate-QEC metrology? This is a targeted comparison, not an exhaustive priority certification.
+
+1. **C. Beny and O. Oreshkov, [arXiv:0907.5391v4](https://arxiv.org/abs/0907.5391v4), 24 March 2010; PRL 104, 120501.** Inspected definitions (1)-(2), Theorem 1/equation (3), identity-target specialization and recovery discussion. Original obstacle: operational approximate correctability. Enabling structure: finite ordinary channels, complementary Stinespring channel and minimization over all logical inputs including references. That structure is present in our native-off damping benchmark; it is not assumed for a nonlinear channel. The imported equality gives a single constant environment state with a worst-case ROOT fidelity guarantee. Our eta is one minus its square. The source's HTML body rendering date is not its publication date. No novel information--disturbance theorem is claimed.
+
+2. **S. Zhou, M. Zhang, J. Preskill and L. Jiang, [arXiv:1706.02445v2](https://arxiv.org/abs/1706.02445v2), 2 February 2018; Nature Communications 9, 78.** Inspected exact error-product conditions and Section 0.9's approximate-error discussion. Original obstacle: preserving a linear metrological signal while removing Markovian noise. Enabling structure: signal outside the Lindblad span, controllable code and fast ordinary correction. Our source/exchange lie in finite damping environmental observables; a compatible native protected implementation is unproved. This prior work already establishes the organizing signal/noise-span principle; its linear QFI sufficiency/result is not imported as a nonlinear computational theorem.
+
+3. **S. Zhou and L. Jiang, [arXiv:1910.08472v1](https://arxiv.org/abs/1910.08472v1), 18 October 2019; Physical Review Research 2, 013235 (2020).** Inspected the stated adaptive AQEC metrology target and construction. Its optimal precision result concerns a parameter-dependent linear Hamiltonian with Markovian noise and permitted controls. It prevents treating approximate recovery/signal tradeoffs in general as a new topic. The present candidate instead bounds trace-distance growth under a specified state-dependent generator and invariant-code premise; we do not claim to improve the metrology bound or its optimizer.
+
+4. **A. M. Childs and J. Young, [arXiv:1507.06334v2](https://arxiv.org/abs/1507.06334v2), 27 April 2016; Physical Review A 93, 022314.** Retained research comparison covers ideal nonlinear discrimination and effective-model resource limits. The current abstract record confirms journal/version metadata. This is the baseline for the possibility of amplification under an assumed nonlinear law, not an error-corrected physical implementation. The candidate does not claim first fast nonlinear state discrimination.
+
+5. **J. Watrous, [The Theory of Quantum Information](https://cs.uwaterloo.ca/~watrous/TQI/), April 2018.** Chapter 3, Uhlmann's theorem (Theorem 3.22), Fuchs--van de Graaf (3.33), and ordinary state-discrimination/trace-norm facts. The author-hosted PDF was inspected; it is for personal use and is **not redistributed**. These standard tools support the rare-event proof and operational interpretation, not a novel theorem attribution.
+
+Primary snapshots/hash receipts: `verification/source-downloads.json`; the four downloaded full sources stay under ignored `sources/`. Bibliographic journal/DOI/version fields were checked against primary arXiv records and the author's book page. Searches for nonlinear amplification with approximate recovery and state-dependent Hamiltonians with information--disturbance returned no matched theorem in the inspected primary results; broad unrelated results were not treated as novelty evidence. This search does not exclude prior work or certify importance.
+
+## Exact new application being evaluated
+
+The manuscript derives finite environmental observables for P and J, uses their O(gamma) event mass to replace the weaker sqrt(eta)/gamma scale by sqrt(eta/gamma)+eta/gamma, and integrates the complete nonlinear generator without a lower bound on source population. A finite code/decoder shows the square-root compression exponent is necessary. The theorem does not assert the dynamical bound is tight: the example's native exchange leaves the code.
+
+The original S287 note already proved the generator comparison in terms of compression defects. S291's operational bridge and explicit recovery example are the changed mathematics. The earlier ideal algorithms, bias failures and code-loss obstruction are preserved in `evidence/` as provenance rather than bundled into a claim of universal nonlinear impossibility. A short technical application may be useful; suitability for an archival paper remains to be judged by the actual three-lens reports and final scope decision.
+
+
+.zenodo.json:
+{
+  "title": "Operational recovery bounds for an expectation-dependent quantum amplifier",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Preparation-stage candidate applying approximate quantum error correction to a hypothetical state-dependent amplifier. Gives operational recovery-to-compression bounds and a conditional whole-trajectory gain estimate. No physical realization, unrestricted impossibility theorem, BPP/BQP result or formal certification is claimed.",
+  "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+  "license": "CC-BY-4.0"
+}
+
+
+CITATION.cff:
+cff-version: 1.2.0
+message: "Research manuscript candidate, not an archival publication or formal certificate."
+type: article
+title: "Operational recovery bounds for an expectation-dependent quantum amplifier"
+authors:
+  - family-names: Fredriksen
+    given-names: Daniel
+    affiliation: Quantyra Inc.
+    orcid: "https://orcid.org/0009-0002-9123-7435"
+version: 0.1.0
+license: CC-BY-4.0

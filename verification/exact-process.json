@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-11-16T21:05:30.434397+00:00",
+  "cap_seconds": 60,
+  "command": "python -B tools/check_exact.py",
+  "exit_code": 0,
+  "within_cap": true,
+  "stdout": "{\"status\": \"pass\", \"assertions\": 46, \"maximum_matrix_dimension\": 16, \"damping_choices\": [{\"gamma\": \"0\", \"source_defect\": \"7/50\"}, {\"gamma\": \"9/25\", \"source_defect\": \"7/50\"}, {\"gamma\": \"16/25\", \"source_defect\": \"7/50\"}, {\"gamma\": \"1\", \"source_defect\": \"7/50\"}], \"zero_damping_role\": \"control only; theorem requires gamma>0\", \"scope\": \"exact finite Kraus/source/code/syndrome substitutions, not channel-duality or asymptotic validation\", \"script_sha256\": \"0034137e8fab9bf253f79f911a09bdcdf27eca0e46c2f92bc8c40c395dae2a3e\", \"elapsed_seconds\": 0.039639499969780445}\n",
+  "stderr": "",
+  "wall_seconds": 0.13182559981942177
+}

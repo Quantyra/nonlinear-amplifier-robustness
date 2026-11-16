@@ -1,0 +1,34 @@
+[
+  {
+    "file": "sources/beny-oreshkov-v4.html",
+    "url": "https://arxiv.org/html/0907.5391v4",
+    "http_status": 200,
+    "status": "retrieved",
+    "sha256": "3915a8e929d6ebffd5ad1f6d734f9b214d41d40fdd1235d29c479422628129c7",
+    "bytes": 196405
+  },
+  {
+    "file": "sources/zhou-et-al-v2.html",
+    "url": "https://arxiv.org/html/1706.02445v2",
+    "http_status": 200,
+    "status": "retrieved",
+    "sha256": "d4dfd091ce989679c0b47938d4e57cd0859d51657e0ba0f66e0c40175ffba169",
+    "bytes": 477511
+  },
+  {
+    "file": "sources/zhou-jiang-v1.html",
+    "url": "https://arxiv.org/html/1910.08472v1",
+    "http_status": 200,
+    "status": "retrieved",
+    "sha256": "6d047a8da7576861777e9b1de3b5e68d7455dbde8ed4aa16773023dcbae09d24",
+    "bytes": 560128
+  },
+  {
+    "file": "sources/watrous-chapter3.pdf",
+    "url": "https://cs.uwaterloo.ca/~watrous/TQI/TQI.3.pdf",
+    "http_status": 200,
+    "status": "retrieved",
+    "sha256": "e91c1a2112676c0f0f6070f97a35099d5e6f392c5d971f7f9054b38c6dd6fe46",
+    "bytes": 699547
+  }
+]

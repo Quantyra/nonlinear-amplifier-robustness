@@ -1,0 +1,29 @@
+{
+  "source_sha256": "0891e8571c5904555500aed76a8c7814e0835061319bf4243afbe38135c04f58",
+  "status": "INPUTS_FROZEN_NOT_REVIEW_COMPLETE",
+  "files": {
+    "manuscript/main.tex": "0891e8571c5904555500aed76a8c7814e0835061319bf4243afbe38135c04f58",
+    "README.md": "4582ca9a94ba7b3e8a680951b7468bbfbd49b9cc24eee1b31ffc4c274a21f078",
+    "CLAIMS.md": "8f9fee0e98bec9f50c30b6b65bc594c215060021cc4e709638fd0c43bd7d4030",
+    "SOURCES.md": "cc6a920e57fba00f7dabbbfc942afad58a6df490981660785ce6c54a9405c7ec",
+    ".zenodo.json": "e2427bd7cfc3984cbe0522b9c3f2d91358f8ef53e6f40687fc7efebcebbe1402",
+    "CITATION.cff": "dfa00d781e20544eb10e93888721c82532a5fe10d8a28bb0a3fde3771f4a6917"
+  },
+  "assignments": {
+    "claude": {
+      "lens": "Proof-adversarial. Try to falsify the operational recovery-to-compression theorem, all fidelity conventions/constants, rare-event lemma, exact environment pullbacks, p=0 extension, moving invariant code and channel-boundary comparison, and finite code/decoder with its asymptotic exponent. Identify precisely any missing mathematical hypothesis. A valid special-case derivation alone is not enough for the quantified claim.",
+      "packet": "reviews/three-lens-2026-11-16/initial-claude-packet.txt",
+      "sha256": "188e90dc1786a835f8524d2378388e44f7e80bdc192b22d31a0256b0e1cba657"
+    },
+    "grok": {
+      "lens": "Quantitative/resource. Independently recompute the eta/gamma scale, compression caps, trajectory constant22 and discrimination constant1/264; test gamma->0, eta->0, spectators, moving codes, channel boundaries, and optimal-vs-achieved recovery. Audit all costs and determine whether the explicit scaling witness supports ONLY compression sharpness. Find any hidden computation or uncharged simultaneous-noise premise.",
+      "packet": "reviews/three-lens-2026-11-16/initial-grok-packet.txt",
+      "sha256": "e2f6dc0bf8e78847a080db2e1b38c2bf4dbde796a0eb85985603dd295e0459a4"
+    },
+    "agy": {
+      "lens": "Non-claims/attribution. Audit title, abstract, full theorem scope, README, CLAIMS, SOURCES and metadata against the proofs. Distinguish imported approximate-QEC duality and linear-metrology principle from the new finite-damping/nonlinear application. Is the candidate a coherent scoped technical contribution, or only a restatement? Do not pretend to search literature or certify novelty. Check the strict common invariant-code premise, hypothetical primitive, non-attainment of dynamical sharpness, no physical implementation or unrestricted no-go, and review/formal/publication status.",
+      "packet": "reviews/three-lens-2026-11-16/initial-agy-packet.txt",
+      "sha256": "540ad769bec38d47e11fd1766db9f5249aae0b2f474e02c285aad6b65de3291e"
+    }
+  }
+}

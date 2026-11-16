@@ -1,0 +1,27 @@
+{
+  "source_repository": "https://github.com/Quantyra/quantyra-quantum-complexity",
+  "source_commit": "490b2bd15d7fa6ebb3718b3e1c6dc557ea3a9ea5",
+  "scope": "Historical notes, not newly reviewed/certified manuscript claims",
+  "files": [
+    {
+      "original_path": "proofs/e004-s282-coherent-exchange-hamiltonian-2026-11-15.md",
+      "file": "evidence/e004-s282-coherent-exchange-hamiltonian-2026-11-15.md",
+      "sha256": "4eb2b4dca82db7b64f66e05ee0c5eb2cbb7cd4187d65c03116c8b379f246fe38"
+    },
+    {
+      "original_path": "proofs/e004-s285-unread-dephasing-2026-11-16.md",
+      "file": "evidence/e004-s285-unread-dephasing-2026-11-16.md",
+      "sha256": "b701d14a3a767409f0071a8a21e64d10b59215fc244acc51f00160bb896c8d2e"
+    },
+    {
+      "original_path": "proofs/e004-s287-protected-native-control-2026-11-16.md",
+      "file": "evidence/e004-s287-protected-native-control-2026-11-16.md",
+      "sha256": "6624022e9d266ac807b1f6d9a12a7f14e775bc5921695cfeacc92e3b8b39b559"
+    },
+    {
+      "original_path": "proofs/e004-s288-dissipative-phase-cycle-2026-11-16.md",
+      "file": "evidence/e004-s288-dissipative-phase-cycle-2026-11-16.md",
+      "sha256": "b410499c201944f37a75efa49930ca354b42da6e1cb82129bc027aa56c43498b"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "provider": "claude",
+    "phase": "final",
+    "configured_model": "opus",
+    "effort": "medium",
+    "binary_sha256": "e896a9d8da519353a49bf69ca4a695ba7e09067752687c675b3969041e632d52",
+    "started_utc": "2026-11-16T21:22:28.919392+00:00",
+    "elapsed_seconds": 217.65,
+    "source_sha256": "07d0f17d9bc09aae4f713cb988e51363812f37e8030963513ecf022000819b46",
+    "input_packet_sha256": "a28d95a88e2b8ec276a64f2233f2d17d2fdcd0147008044c6698c15239bdf1b4",
+    "status": "TERMINAL",
+    "exit_code": 0,
+    "report": "reviews/three-lens-2026-11-16/claude-final.md",
+    "report_sha256": "841a259737c3f440509ba6f21acfe85a9efe6738ab5683d4a29a3cb7b524523f",
+    "raw_response_sha256": "5c5efd65b705002956e349ffdce8f3afbc63e911314ee80dba04fc408d06a4bf",
+    "returned_model": "claude-opus-5-5",
+    "local_path_redactions": 0,
+    "completion_verified": true
+  },
+  {
+    "provider": "agy",
+    "phase": "final",
+    "configured_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "binary_sha256": "8803c289cac04d6e53f2211592d9981c2d5760bc0d9b4a7f222ef6ecc7abb38a",
+    "started_utc": "2026-11-16T21:22:26.292788+00:00",
+    "elapsed_seconds": 141.41,
+    "source_sha256": "07d0f17d9bc09aae4f713cb988e51363812f37e8030963513ecf022000819b46",
+    "input_packet_sha256": "8b073e8fb18cbf5a8e076177260739ee735f504b6254cfa71008a287bd0a12db",
+    "status": "TERMINAL",
+    "exit_code": 0,
+    "report": "reviews/three-lens-2026-11-16/agy-final.md",
+    "report_sha256": "dcd7103f7c7eb99a1b224682692c5cbf219475ac301b2396a02933269acd10df",
+    "raw_response_sha256": "519ef7e8cfdbfd81499b6a67c4a34121984cfad242267c94453913183ab293fd",
+    "returned_model": "Not attested by returned JSON",
+    "local_path_redactions": 0,
+    "completion_verified": true
+  }
+]

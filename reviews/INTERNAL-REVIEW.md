@@ -1,0 +1,13 @@
+# Internal derivation and verification record
+
+2026-11-16, same Codex agent as derivation. This is not independent review; separate provider-native reports have their own source bindings and dispositions.
+
+The original S287 obstruction was expressed in compression defects. The new operation first tests the ordinary encoded finite damping channel with native evolution off. Beny--Oreshkov supplies one constant complementary state at the stated worst-case root fidelity. Uhlmann plus Cauchy--Schwarz bounds observables supported on environmental events of mass at most gamma or 2gamma. Exact complementary pullbacks then give dimension-independent source/exchange defects of order sqrt(eta/gamma)+eta/gamma. The manuscript does not apply channel duality to a nonlinear channel.
+
+Internal checks independently followed the normalization and endpoints: eta is squared-fidelity infidelity; half-diamond error implies the given fidelity bound; gamma is strictly positive in the theorem; caps are spectral midpoint radii. The off-diagonal exchange inequality bounds j/(2 sqrt(p)) without assuming a minimum source population. At p=0 the nonlinear vector contribution vanishes continuously. Scalar generator terms affect only phase. Variation of constants along the actual trajectories, followed by a triangle inequality, supplies the factor two without nonlinear contractivity. Common code and retained ordinary-boundary assumptions are indispensable.
+
+The explicit code has four orthogonal syndrome directions. Its logical recovery channel is dephasing with parameter (1-lambda)/2; purification fidelity reduces to the displayed phase-flip expression. The Taylor coefficient is gamma/[4a(1-gamma*a)] at fixed interior a and fixed positive gamma. Its J action leaves the code, so it proves only the compression exponent limitation. No matching protected amplifier or tight dynamical exponent is inferred.
+
+One preregistered exact diagnostic was run: 46 assertions, maximum matrix dimension16, three positive rational damping choices plus gamma0 as a control, terminal exit0 within the60second cap. It checks finite substitutions only. The seven-page PDF was rebuilt and all pages visually checked; there are no final TeX diagnostics. Fontconfig's environment message is retained. No asymptotic theorem follows from the diagnostic, and no Lean run occurred.
+
+Named literature comparisons and remaining priority uncertainty are in SOURCES.md. The narrower combined application is the manuscript candidate; ordinary BPP/BQP bounds, paid native realization, arbitrary unprotected excursions and simultaneous noisy nonlinear dynamics remain unresolved. Review status is determined only by the actual provider reports and final disposition, not this internal record.

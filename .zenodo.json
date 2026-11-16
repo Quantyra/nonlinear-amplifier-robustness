@@ -1,0 +1,8 @@
+{
+  "title": "Operational recovery bounds for an expectation-dependent quantum amplifier",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Preparation-stage candidate applying approximate quantum error correction to a hypothetical state-dependent amplifier. Gives operational recovery-to-compression bounds and a conditional whole-trajectory gain estimate. No physical realization, unrestricted impossibility theorem, BPP/BQP result or formal certification is claimed.",
+  "creators": [{"name": "Fredriksen, Daniel", "affiliation": "Quantyra Inc.", "orcid": "0009-0002-9123-7435"}],
+  "license": "CC-BY-4.0"
+}
