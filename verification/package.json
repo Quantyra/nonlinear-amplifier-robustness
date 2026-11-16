@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-16T22:19:51.323939+00:00",
+  "created_utc": "2026-11-16T22:23:30.604742+00:00",
   "scope": "Package inventory and verification, not publication or formal acceptance",
   "verification": {
     "status": "pass",
@@ -45,8 +45,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 520,
-      "sha256": "cd7bec0bb6731042093c878f1987224757581e552880ec7442fe440966e3a8f0"
+      "bytes": 594,
+      "sha256": "e4e8e33fa8c85be595b6088d7115ef48c6af24a331643ab4866674f8bf3a7e27"
     },
     {
       "path": "CLAIMS.md",
@@ -60,8 +60,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3710,
-      "sha256": "252f205eb355269f64ba7f9e95495194fdfdbec43875df5bf1fe5102bef98cdd"
+      "bytes": 3969,
+      "sha256": "483ad7e5b26cb4ef55661c9116c88d86b8428768f375a487623d2d82654f8660"
     },
     {
       "path": "SOURCES.md",
@@ -282,6 +282,11 @@
       "path": "verification/exact-process.json",
       "bytes": 864,
       "sha256": "d7b1285b229c7f5d0c202bb0309e74542822fb069f99128d042e736407f28f50"
+    },
+    {
+      "path": "verification/publication-v1.0.0.json",
+      "bytes": 1909,
+      "sha256": "06e42b148b76eb11535eb8903106379c2862bc9bb0459a920673f297739cf5b9"
     },
     {
       "path": "verification/release-preparation-v1.0.0.json",

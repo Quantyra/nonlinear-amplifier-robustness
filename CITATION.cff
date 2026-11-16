@@ -11,3 +11,5 @@ version: 1.0.0
 license: CC-BY-4.0
 date-released: 2026-11-16
 repository-code: "https://github.com/Quantyra/nonlinear-amplifier-robustness"
+doi: "10.5281/zenodo.24293865"
+url: "https://zenodo.org/records/24293865"

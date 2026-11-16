@@ -1,0 +1,39 @@
+{
+  "verified_utc": "2026-11-16T22:22:50.963829+00:00",
+  "status": "PUBLISHED_PREPRINT_ARCHIVE_VERIFIED",
+  "version": "1.0.0",
+  "release_commit": "5f3cac952f7f37c54bbb9da4a504a504fd14b502",
+  "release_tag": "v1.0.0",
+  "release_url": "https://github.com/Quantyra/nonlinear-amplifier-robustness/releases/tag/v1.0.0",
+  "published_at": "2026-11-16T22:20:38Z",
+  "zenodo_record_id": 24293865,
+  "doi": "10.5281/zenodo.24293865",
+  "concept_doi": "10.5281/zenodo.24293864",
+  "zenodo_url": "https://zenodo.org/records/24293865",
+  "doi_resolver_check": {
+    "status": 200,
+    "final_url": "https://zenodo.org/records/24293865"
+  },
+  "zenodo_title": "Operational recovery bounds for an expectation-dependent quantum amplifier",
+  "zenodo_resource_type": {
+    "title": "Preprint",
+    "type": "publication",
+    "subtype": "preprint"
+  },
+  "zenodo_archive_file": "Quantyra/nonlinear-amplifier-robustness-v1.0.0.zip",
+  "zenodo_archive_bytes": 341272,
+  "zenodo_archive_md5": "ebc843f9e9e5a8c9295c30a06bf7c58c",
+  "zenodo_archive_sha256": "fe9e46769fb3408145f0aff93ebc003ffe8322679e06d830ca36dff727bc8768",
+  "archive_manifest_files_verified": 54,
+  "manuscript_sha256": "1f0219515ba8af76fcc077ac2c145aba5b06aea3b4a4494b96fcc3748fe5a419",
+  "pdf_sha256": "bc73472563fb517f3efcf4767863812ea3061e0a9005ddbb3ce80f447e80cff4",
+  "github_pdf_asset_digest_verified": true,
+  "all_archived_manifest_bytes_verified": true,
+  "review_status": "COMPLETE_WITH_DISPOSITIONS",
+  "unresolved_essential_findings": [],
+  "human_peer_review": false,
+  "formal_certification": false,
+  "custody": "Existing PaperMill certification remains queued; no queue/job/owner changes.",
+  "delivery_notes": "Published webhook was202; duplicate released webhook returned500. Published archive independently verified; no redelivery needed.",
+  "scope": "Archival publication and byte verification, not new mathematics or a new review."
+}

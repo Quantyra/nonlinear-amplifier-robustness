@@ -1,5 +1,7 @@
 # Operational recovery bounds for an expectation-dependent quantum amplifier
 
+Published preprint: **[DOI 10.5281/zenodo.24293865](https://doi.org/10.5281/zenodo.24293865)**. [GitHub release](https://github.com/Quantyra/nonlinear-amplifier-robustness/releases/tag/v1.0.0) · [Archive verification](verification/publication-v1.0.0.json).
+
 Preprint version 1.0.0, 2026-11-16. Daniel Fredriksen, Quantyra Inc., ORCID 0009-0002-9123-7435. **Separate Claude/Grok/AGY three-lens AI review is complete with all essential findings resolved; see the source-bound reports below.** Human peer review and Lean certification are not claimed. Scientific owner: Quantum S291.
 
 The earlier protected-source bound used operator-compression defects without relating them to an operational recovery guarantee. This candidate closes that connection for finite amplitude damping. Standard channel-fidelity duality plus a rare-event estimate gives dimension-independent source/exchange bounds in terms of the recovery infidelity divided by damping strength. For the stated common-invariant-moving-code class,
