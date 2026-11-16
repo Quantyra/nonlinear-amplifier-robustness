@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-16T21:40:53.015503+00:00",
+  "created_utc": "2026-11-16T22:19:51.323939+00:00",
   "scope": "Package inventory and verification, not publication or formal acceptance",
   "verification": {
     "status": "pass",
@@ -35,18 +35,18 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 646,
-      "sha256": "e2427bd7cfc3984cbe0522b9c3f2d91358f8ef53e6f40687fc7efebcebbe1402"
+      "bytes": 843,
+      "sha256": "8c7867e9ca3a4919d026d2ec59bbc5890e999a0cbc0cc26a5f10bc56ac4df3e3"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 909,
-      "sha256": "8b2b339c70b269e76b527e77690652326050c18b98504c835f432d6f6e260d52"
+      "bytes": 1335,
+      "sha256": "9eb0c29c5e36698e1b946ff175aece5cbccd11f04657e83d63d36607307353de"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 388,
-      "sha256": "dfa00d781e20544eb10e93888721c82532a5fe10d8a28bb0a3fde3771f4a6917"
+      "bytes": 520,
+      "sha256": "cd7bec0bb6731042093c878f1987224757581e552880ec7442fe440966e3a8f0"
     },
     {
       "path": "CLAIMS.md",
@@ -60,8 +60,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3570,
-      "sha256": "77ea6535186738344abf90e22f2addaaf3dce3c4df5f57ebd91c35211800554f"
+      "bytes": 3710,
+      "sha256": "252f205eb355269f64ba7f9e95495194fdfdbec43875df5bf1fe5102bef98cdd"
     },
     {
       "path": "SOURCES.md",
@@ -282,6 +282,11 @@
       "path": "verification/exact-process.json",
       "bytes": 864,
       "sha256": "d7b1285b229c7f5d0c202bb0309e74542822fb069f99128d042e736407f28f50"
+    },
+    {
+      "path": "verification/release-preparation-v1.0.0.json",
+      "bytes": 1243,
+      "sha256": "1a4c240ab622211552d91179057376dfffbd2e4d88a0da1803c93631ec66ebfa"
     },
     {
       "path": "verification/source-downloads.json",

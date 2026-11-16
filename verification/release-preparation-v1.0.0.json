@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-11-16T22:18:17.883146+00:00",
+  "paper": "P013",
+  "repository": "https://github.com/Quantyra/nonlinear-amplifier-robustness",
+  "status": "REVIEW_GATE_PASSED_RELEASE_PREPARED",
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "authority": "Dan: If they both have passed 3 lens review then publish them.",
+  "zenodo_enabled": "Confirmed by Dan",
+  "reviewed_commit": "d1f966cc93e544464bc7be38c6db3a87df9f3928",
+  "manuscript_sha256": "1f0219515ba8af76fcc077ac2c145aba5b06aea3b4a4494b96fcc3748fe5a419",
+  "pdf_sha256": "bc73472563fb517f3efcf4767863812ea3061e0a9005ddbb3ce80f447e80cff4",
+  "review_summary_sha256": "b70a5a9355962761b71e0c237a5137b9092c51e6f2869cff67c6c13d4c5f928c",
+  "review_status": "COMPLETE_WITH_DISPOSITIONS",
+  "unresolved_essential_findings": [],
+  "providers": [
+    "claude",
+    "grok",
+    "agy"
+  ],
+  "manuscript_and_pdf_changed": false,
+  "checks": "Existing package verification, exact review/packet/report bindings and prior manifest hashes pass; no mathematical experiment or model review rerun.",
+  "human_peer_review": false,
+  "formal_certification": false,
+  "new_proof_jobs": false,
+  "scope": "Preprint publication only; existing PaperMill certification custody and queue unchanged."
+}
